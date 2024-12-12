@@ -17,6 +17,7 @@ mainnet = []
 
 
 [dependencies]
+sphincsplus = { path = "../../crates/sphincsplus", features = ["f256", "simple", "sha2", "KAT"] }
 alkanes-support = { git = "https:/github.com/kungfuflex/alkanes-rs" }
 alkanes-runtime = { git = "https://github.com/kungfuflex/alkanes-rs" }
 metashrew-support = { git = "https://github.com/kungfuflex/alkanes-rs" }
