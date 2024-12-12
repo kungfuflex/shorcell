@@ -1,1 +1,1 @@
-pub mod fr_btc_build;
+pub mod shorcell_contract_build;

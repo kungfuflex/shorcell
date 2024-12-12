@@ -1,9 +1,9 @@
 [package]
-name = "frbtc-support"
+name = "shorcell-support"
 version = "0.1.0"
 edition = "2021"
-description = "frBTC support library"
-repository = "https://github.com/subfrost/frBTC"
+description = "shorcell support library"
+repository = "https://github.com/kungfuflex/shorcell"
 
 [lib]
 crate-type = ["cdylib", "rlib"]

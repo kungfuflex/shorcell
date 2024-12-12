@@ -14,11 +14,11 @@ use protorune_support::{network::{to_address_str, NetworkParams, set_network},pr
 use ordinals::{Runestone, Artifact};
 use bitcoin::{Script, OutPoint, Amount, TxOut, Transaction};
 use bitcoin::hashes::{Hash};
-use frbtc_support::{Payment};
+use shorcell_support::{Payment};
 use std::sync::Arc;
 
 #[derive(Default)]
-pub struct SyntheticBitcoin(());
+pub struct Shorcell(());
 
 #[cfg(all(
     not(feature = "mainnet"),
@@ -85,7 +85,7 @@ pub trait MintableToken: Token {
     }
 }
 
-impl Token for SyntheticBitcoin {
+impl Token for Shorcell {
     fn name(&self) -> String {
         String::from("SUBFROST BTC")
     }
@@ -93,11 +93,11 @@ impl Token for SyntheticBitcoin {
         String::from("frBTC")
     }
 }
-impl MintableToken for SyntheticBitcoin {}
+impl MintableToken for Shorcell {}
 
-impl AuthenticatedResponder for SyntheticBitcoin {}
+impl AuthenticatedResponder for Shorcell {}
 
-impl SyntheticBitcoin {
+impl Shorcell {
   fn signer_pointer(&self) -> StoragePointer {
     StoragePointer::from_keyword("/signer")
   }
@@ -199,7 +199,7 @@ impl SyntheticBitcoin {
   }
 }
 
-impl AlkaneResponder for SyntheticBitcoin {
+impl AlkaneResponder for Shorcell {
     fn execute(&self) -> Result<CallResponse> {
         configure_network();
         let context = self.context()?;
@@ -279,6 +279,6 @@ impl AlkaneResponder for SyntheticBitcoin {
 
 #[no_mangle]
 pub extern "C" fn __execute() -> i32 {
-    let mut response = to_arraybuffer_layout(&SyntheticBitcoin::default().run());
+    let mut response = to_arraybuffer_layout(&Shorcell::default().run());
     to_passback_ptr(&mut response)
 }

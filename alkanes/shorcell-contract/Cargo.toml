@@ -1,5 +1,5 @@
 [package]
-name = "fr-btc"
+name = "shorcell-contract"
 version = "0.1.0"
 edition = "2021"
 
@@ -21,7 +21,7 @@ alkanes-support = { git = "https:/github.com/kungfuflex/alkanes-rs" }
 alkanes-runtime = { git = "https://github.com/kungfuflex/alkanes-rs" }
 metashrew-support = { git = "https://github.com/kungfuflex/alkanes-rs" }
 protorune-support = { git = "https://github.com/kungfuflex/alkanes-rs" }
-frbtc-support = { path = "../../crates/frbtc-support" }
+shorcell-support = { path = "../../crates/shorcell-support" }
 ordinals = { git = "https://github.com/kungfuflex/alkanes-rs" }
 anyhow = "1.0.94"
 bitcoin = { version = "0.32.4", features = ["rand"] }
