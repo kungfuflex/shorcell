@@ -1,0 +1,1 @@
+pub const SHORCELL_FACTORY_ID: u128 = 0x08080;

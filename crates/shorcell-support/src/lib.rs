@@ -3,6 +3,9 @@ use metashrew_support::utils::{is_empty, consensus_encode, consensus_decode};
 use bitcoin::{OutPoint, TxOut};
 use std::io::{Cursor};
 
+pub mod constants;
+pub mod address;
+
 #[derive(Debug, Clone)]
 pub struct Payment {
   pub spendable: OutPoint,
