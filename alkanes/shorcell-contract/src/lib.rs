@@ -87,7 +87,7 @@ impl Shorcell {
      
     let pk = self.public();
     tx.input[0].witness = Witness::new();
-    sphincsplus::crypto_sign_verify(&signature, &consensus_encode::<Transaction>(&tx)?, &pk).map_err(|_| anyhow!("signature verify failure"))?;
+    crate::sphincsplus::sign::crypto_sign_verify(&signature, &consensus_encode::<Transaction>(&tx)?, &pk).map_err(|_| anyhow!("signature verify failure"))?;
     Ok(())
   }
 }

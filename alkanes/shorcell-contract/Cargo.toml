@@ -17,7 +17,7 @@ mainnet = []
 
 
 [dependencies]
-sphincsplus = { path = "../../crates/sphincsplus", features = ["s128", "simple", "sha2", "KAT"] }
+sphincsplus = { path = "../../crates/sphincsplus", features = ["s128", "simple", "sha2"] }
 alkanes-support = { git = "https:/github.com/kungfuflex/alkanes-rs" }
 alkanes-runtime = { git = "https://github.com/kungfuflex/alkanes-rs" }
 metashrew-support = { git = "https://github.com/kungfuflex/alkanes-rs" }
@@ -26,3 +26,4 @@ shorcell-support = { path = "../../crates/shorcell-support" }
 ordinals = { git = "https://github.com/kungfuflex/alkanes-rs" }
 anyhow = "1.0.94"
 bitcoin = { version = "0.32.4", features = ["rand"] }
+getrandom = { version = "0.2.15", features = ["js"] }

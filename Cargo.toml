@@ -29,6 +29,8 @@ anyhow = "1.0.94"
 bitcoin = { version = "0.32.4", features = ["rand"] }
 hex = "0.4.3"
 sphincsplus = { path = "crates/sphincsplus", features = ["s128", "simple", "sha2", "KAT"] }
+wasm-bindgen-test = "0.3.49"
+getrandom = { version = "0.2" }
 
 [dev-dependencies]
 alkanes = { git = "https://github.com/kungfuflex/alkanes-rs", features = ["test-utils"] }
